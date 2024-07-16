@@ -15,5 +15,8 @@
   "workspaces": [
     "src/example_backend",
     "src/example_frontend"
-  ]
+  ],
+  "dependencies": {
+    "express": "^4.19.2"
+  }
 }

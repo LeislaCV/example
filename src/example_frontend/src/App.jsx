@@ -1,31 +1,19 @@
 import { useState } from 'react';
-import { example_backend } from 'declarations/example_backend';
+import desoname from "./Images/desoname.png"
 
 function App() {
-  const [greeting, setGreeting] = useState('');
+return(
+  <>
+  <Navbar>
+    <container>
+      <Navbar.Brand>
+        <img src="./Images/desoname.png" alt="Juntos podemos lograr cualquier cosa" />
+      </Navbar.Brand>
+    </container>
+  </Navbar>
+  </>
+)  
 
-  function handleSubmit(event) {
-    event.preventDefault();
-    const name = event.target.elements.name.value;
-    example_backend.greet(name).then((greeting) => {
-      setGreeting(greeting);
-    });
-    return false;
-  }
-
-  return (
-    <main>
-      <img src="/logo2.svg" alt="DFINITY logo" />
-      <br />
-      <br />
-      <form action="#" onSubmit={handleSubmit}>
-        <label htmlFor="name">Enter your name: &nbsp;</label>
-        <input id="name" alt="Name" type="text" />
-        <button type="submit">Click Me!</button>
-      </form>
-      <section id="greeting">{greeting}</section>
-    </main>
-  );
 }
 
-export default App;
+export default App;
